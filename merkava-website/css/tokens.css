@@ -1,0 +1,26 @@
+/* MERKAVA DESIGN TOKENS — brand colours, typography, radii and shared visual variables. */
+/* Design tokens: brand colours, shadows, dark theme */
+:root {
+  --b: #00afef;
+  --bd: #0079ae;
+  --bg: #fff;
+  --s: #f4f9fc;
+  --t: #0b1a24;
+  --m: #566a77;
+  --l: #dce8f0;
+  --ok: #15803d;
+  --er: #dc2626;
+  --ink: #06131c;
+  --sh: 0 14px 40px -14px #0a2a3c44;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a1218;
+    --s: #0f1b25;
+    --t: #eaf3f9;
+    --m: #9bb0bd;
+    --l: #1f3342;
+    --bd: #35c0f5;
+    --sh: 0 14px 40px -14px #000a;
+  }
+}

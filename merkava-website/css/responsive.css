@@ -1,0 +1,85 @@
+/* MERKAVA RESPONSIVE RULES — breakpoints, mobile layout, reduced motion and print. */
+/* Small-screen, motion and print overrides */
+@media (max-width: 600px) {
+  .fab span {
+    display: none;
+  }
+  .fab {
+    padding: 15px;
+  }
+  .sec {
+    padding: 60px 0;
+  }
+  .band {
+    padding: 32px;
+  }
+  .sc {
+    padding: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .rv {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media print {
+  header,
+  footer,
+  .fab,
+  .np {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .fc {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+}
+@media (max-width: 900px) {
+  .vis {
+    display: block;
+    min-height: 0;
+    height: 170px;
+  }
+  .vis .car2,
+  .vis .vc {
+    display: none;
+  }
+  .vis .car1 {
+    position: static;
+    display: block;
+    width: 72%;
+    margin: 0 auto;
+  }
+  .vis .glow {
+    inset: 0;
+  }
+}
+@media (max-width: 640px) {
+  .fc {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .stats b {
+    font-size: 14px;
+  }
+  .mt {
+    width: 100%;
+  }
+  .mt button {
+    flex: 1;
+    padding: 9px 6px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,133 @@
+/* MERKAVA LAYOUT — site header, navigation, page frame and footer structure. */
+/* Header, navigation, page wrappers, footer */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--bg) 84%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--l);
+}
+header .w {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 68px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--t);
+}
+.logo img {
+  height: 46px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 3px;
+}
+.logo small {
+  display: block;
+  font-weight: 500;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: var(--m);
+  line-height: 1.1;
+}
+.nl {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.nl a.l {
+  color: var(--t);
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 10px;
+}
+.nl a.l:hover {
+  background: var(--s);
+}
+.mb {
+  display: none;
+  margin-left: auto;
+  border: 1.5px solid var(--l);
+  background: none;
+  color: var(--t);
+  border-radius: 10px;
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+}
+@media (max-width: 1024px) {
+  .mb {
+    display: block;
+  }
+  .nl {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--bg);
+    padding: 10px 22px 20px;
+    border-bottom: 1px solid var(--l);
+    margin: 0;
+  }
+  body.mo .nl {
+    display: flex;
+  }
+  .nl .btn {
+    text-align: center;
+  }
+}
+.pg {
+  max-width: 880px;
+  margin: auto;
+  padding: 40px 22px 64px;
+}
+.row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer {
+  background: var(--ink);
+  color: #b9cfdb;
+  padding: 64px 0 28px;
+}
+footer h3 {
+  color: #fff;
+  font-size: 16px;
+}
+footer a {
+  color: #7fd6f7;
+}
+footer img {
+  height: 58px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 3px;
+}
+footer .g3 {
+  margin-bottom: 28px;
+}
+.fb {
+  border-top: 1px solid #ffffff1f;
+  padding-top: 20px;
+  font-size: 13px;
+  color: #8ba5b5;
+}
+.pg h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+}

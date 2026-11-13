@@ -1,0 +1,339 @@
+/* MERKAVA PAGE SECTIONS — homepage, route, fleet, terminal and charter sections. */
+/* Landing page sections: hero, routes, fleet, charter band, terminals */
+.hero {
+  background:
+    radial-gradient(900px 440px at 88% -10%, #00afef55, transparent 62%),
+    radial-gradient(700px 420px at -8% 115%, #0079ae77, transparent 60%), var(--ink);
+  color: #fff;
+  padding: 72px 0 112px;
+  overflow: hidden;
+}
+.hg {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .hg {
+    grid-template-columns: 1fr;
+  }
+  .vis {
+    display: none;
+  }
+  .hero {
+    padding: 48px 0 100px;
+  }
+}
+.hero h1 {
+  font-size: clamp(36px, 5.6vw, 64px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.03;
+  margin: 18px 0;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--b);
+}
+.hero p {
+  color: #b9cfdb;
+  font-size: 18px;
+  max-width: 540px;
+}
+.chip {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 7px 15px;
+  border: 1px solid #ffffff2e;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #ffffff10;
+  color: #d7ecf7;
+}
+.chip i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 0 0 4px #25d36633;
+}
+.cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+.stats {
+  display: flex;
+  gap: 34px;
+  margin-top: 38px;
+  flex-wrap: wrap;
+  color: #9db7c6;
+  font-size: 13px;
+}
+.stats b {
+  display: block;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+.vc {
+  background: #ffffff12;
+  border: 1px solid #ffffff26;
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.rw {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.rw b {
+  display: block;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+.rw small {
+  color: #9db7c6;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+.ln {
+  flex: 1;
+  height: 2px;
+  border-top: 2px dashed #00afef;
+  position: relative;
+}
+.ln span {
+  position: absolute;
+  left: 0;
+  top: -15px;
+  font-size: 20px;
+  animation: dr 4.5s linear infinite;
+}
+@keyframes dr {
+  to {
+    left: calc(100% - 26px);
+  }
+}
+.rw2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #ffffff1f;
+  color: #b9cfdb;
+  font-size: 14px;
+}
+.rw2 b {
+  color: #fff;
+}
+.rc {
+  padding: 30px;
+  transition: 0.2s;
+  cursor: pointer;
+  background: linear-gradient(160deg, var(--bg), var(--s));
+}
+.rc:hover {
+  border-color: var(--b);
+  transform: translateY(-4px);
+  box-shadow: var(--sh);
+}
+.rc h3 {
+  font-size: 28px;
+  margin: 6px 0 14px;
+}
+.band {
+  background: linear-gradient(120deg, var(--ink), #0a3a56);
+  color: #fff;
+  border-radius: 30px;
+  padding: 52px;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.band::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: #00afef33;
+  filter: blur(40px);
+}
+.band p {
+  color: #b9cfdb;
+  max-width: 540px;
+}
+.band > * {
+  position: relative;
+  z-index: 1;
+}
+.vis {
+  position: relative;
+  min-height: 400px;
+}
+.vis .glow {
+  position: absolute;
+  inset: 6% 2%;
+  background: radial-gradient(closest-side, #00afef77, transparent);
+  filter: blur(24px);
+}
+.vis img {
+  position: absolute;
+  filter: drop-shadow(0 28px 26px #000a);
+  animation: fl 6s ease-in-out infinite;
+}
+.car1 {
+  width: 94%;
+  top: 0;
+  left: 0;
+}
+.car2 {
+  width: 60%;
+  bottom: 0;
+  right: 0;
+  animation-delay: -3s;
+}
+@keyframes fl {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.vis .vc {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  padding: 14px 18px;
+  margin: 0;
+  border-radius: 16px;
+  font-size: 13px;
+  z-index: 2;
+}
+.vis .vc b {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+}
+.fleet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.fc {
+  flex: 0 1 calc((100% - 40px) / 3);
+  padding: 0;
+  overflow: hidden;
+  transition: 0.25s;
+}
+.fc:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sh);
+  border-color: var(--b);
+}
+.fc .im {
+  aspect-ratio: 16/10;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(120% 90% at 50% 100%, #00afef33, transparent 70%), linear-gradient(180deg, #eef8fd, #d3ecfa);
+}
+@media (prefers-color-scheme: dark) {
+  .fc .im {
+    background: radial-gradient(120% 90% at 50% 100%, #00afef33, transparent 70%), linear-gradient(180deg, #14283a, #0d1c2a);
+  }
+}
+.fc .im img {
+  position: absolute;
+  inset: 18px;
+  width: calc(100% - 36px);
+  height: calc(100% - 36px);
+  object-fit: contain;
+  filter: drop-shadow(0 14px 14px #0a2a3c66);
+  transition: 0.4s;
+}
+.fc:hover .im img {
+  transform: scale(1.05);
+}
+.fc .bd {
+  padding: 18px 22px 22px;
+}
+.fc .bd h3 {
+  margin: 0 0 2px;
+}
+.term {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.ph {
+  position: relative;
+  aspect-ratio: 16/7;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #00afef22, #0079ae33);
+  display: grid;
+  place-items: center;
+  color: var(--m);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.ph img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.stops {
+  margin-top: 22px;
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 18px 22px;
+  border: 1.5px dashed var(--b);
+  border-radius: 20px;
+  background: #00afef12;
+}
+.stops > div {
+  flex: 1;
+  min-width: 220px;
+}
+.stops > span {
+  align-self: center;
+  font-size: 22px;
+  color: var(--bd);
+}
+.stops small {
+  display: block;
+  color: var(--bd);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.stops b {
+  font-size: 16px;
+}
+.stops .ab {
+  border-left: 4px solid var(--b);
+  padding-left: 14px;
+}
+@media (max-width: 700px) {
+  .stops > span {
+    display: none;
+  }
+}
